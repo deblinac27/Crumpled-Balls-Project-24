@@ -8,13 +8,8 @@ var ground;
 var ball;
 var trash;
 
-function preload()
-{
-	
-}
-
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 
 
 	engine = Engine.create();
@@ -54,7 +49,7 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(ball.body,ball.body.position,{x:10,y:-2})
+		Matter.Body.applyForce(ball.body,ball.body.position,{x:85,y:-85})
 	}
 }
 
