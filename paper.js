@@ -7,7 +7,7 @@ class Paper{
         }
 
         this.body = Bodies.circle(x, y, radius, options);
-        this.radius = 15;
+        this.radius = 35;
         
         World.add(world,this.body);
     }
@@ -16,9 +16,10 @@ class Paper{
         var angle = this.body.angle;
         push();
         translate(pos.x, pos.y);
+        fill("white");
         rotate(angle);
         ellipseMode(CENTER);
-        ellipse(0,0,this.width,this.height);
+        ellipse(0,0,this.radius,this.radius);
         pop();
     }
 }

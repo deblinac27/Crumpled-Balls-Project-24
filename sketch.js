@@ -10,21 +10,14 @@ var trash;
 
 function setup() {
 	createCanvas(1600, 700);
-
-
+	rectMode(CENTER);
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
-
-	ground = new Ground(400, 700, 800, 100);
-
-	left = new Trashcan(500, 600, 10, 100);
-	right = new Trashcan(700, 600, 10, 100);
-	bottom = new Trashcan(600, 650, 210, 10);
-
-	ball = new Paper(200, 200, 15);
-
+	ground = new Ground(800, 670, 1600, 20);
+	left = new Trashcan(1400, 650);
+	ball = new Paper(200, 450, 35);
 	Engine.run(engine);
   
 }
@@ -35,14 +28,9 @@ function draw() {
   background(0);
   
   ground.display();
-
   left.display();
-  right.display();
-  bottom.display();
-
   ball.display();
   
-  keyPressed();
   drawSprites();
  
 }
