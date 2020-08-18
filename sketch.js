@@ -17,7 +17,7 @@ function setup() {
 	//Create the Bodies Here.
 	ground = new Ground(800, 670, 1600, 20);
 	left = new Trashcan(1400, 650);
-	ball = new Paper(200, 450, 35);
+	ball = new Paper(200, 450, 40);
 	Engine.run(engine);
   
 }
